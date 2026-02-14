@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        h1 {
+            color: #e91e63;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+
+        h2 {
+            color: #c2185b;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 24px;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .hearts-animation {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            font-size: 50px;
+        }
+
+        .heart {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .continue-btn {
+            width: 100%;
+            padding: 18px;
+            border: none;
+            border-radius: 15px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+            color: white;
+            transition: all 0.3s;
+            margin-top: 20px;
+        }
+
+        .continue-btn:active {
+            transform: scale(0.95);
+        }
+
+        .message-box {
+            background: linear-gradient(135deg, #ffeef8 0%, #fff0f5 100%);
+            border-radius: 15px;
+            padding: 30px;
+            border: 2px solid #f8bbd0;
+            margin-top: 20px;
+        }
+
+        .message-text {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            white-space: pre-line;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- First Page - Landing -->
+    <div class="container" id="firstPage">
+        <div class="hearts-animation">
+            <div class="heart">💕</div>
+            <div class="heart">💖</div>
+            <div class="heart">💗</div>
+        </div>
+        <h1>Happy Valentine's Day</h1>
+        <h2>My Love</h2>
+        
+        <button class="continue-btn" onclick="showMessage()">
+            Open Your Message
+            <span style="margin-left: 10px;">💝</span>
+        </button>
+    </div>
+
+    <!-- Second Page - Your Message -->
+    <div class="container hidden" id="secondPage">
+        <div class="heart">💖</div>
+        
+        <div class="message-box">
+            <div class="message-text" id="yourMessage">
+                <!-- WRITE YOUR MESSAGE HERE -->
+                Happy Valentine, cipuyyy, saniaaa, Bawell, Cemberutt. cutest, prettiest, strongest girl I've ever met. Terima kasih ya udah jadi alasan aku berani buka hati dan bikin aku kepikiran terus. Kadang hal kecil dari kamu udah bikin aku seneng.
+
+Di hari Valentine ini, honestly aku juga bingung mau ngomong apa. Maaf ya sampai lupa kalau ini hari Valentine, sampe nggak sempet ngasih kamu apa apa. maaf ya aku bikin kamu kecewa, aku juga yang sering bikin kamu sedih. maaf kalo cara aku sayang ke kamu bikin kamu sedih. Mungkin cara aku sayang ke kamu juga belum selalu bikin kamu bahagia, I just want you to be safe and happy.
+
+Selalu bahagia ya, mau itu sama aku atau nanti sama orang yang bisa bikin kamu lebih nyaman. I'm really happy that I got to know you. Semoga semua jalan kamu dipermudah, okayyy.
+
+Aku juga bingung mau ngasih apa, udah telat banget. 
+
+Kalau mau dibeliin apa-apa, bilang yaa :)
+
+Happy Valentineee 💌 
+
+From: kmu tau sendiri 😜
+                <!-- END OF YOUR MESSAGE -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showMessage() {
+            const firstPage = document.getElementById('firstPage');
+            const secondPage = document.getElementById('secondPage');
+            
+            firstPage.style.opacity = '0';
+            
+            setTimeout(() => {
+                firstPage.classList.add('hidden');
+                secondPage.classList.remove('hidden');
+                setTimeout(() => {
+                    secondPage.style.opacity = '1';
+                }, 50);
+            }, 500);
+        }
+    </script>
+</body>
+</html>
